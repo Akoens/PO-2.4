@@ -1,0 +1,11 @@
+.board{
+  z-index: 104;
+  flex: 1;
+  display: flex;
+  align-content: center;
+  flex-flow: row wrap;
+  width: 100%;
+  max-width: 540px;
+  max-height: calc(100% - 150px);
+
+}

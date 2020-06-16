@@ -1,0 +1,71 @@
+
+$base-color: #38393B;
+
+$light-color: #fff2ba;
+$gold-color: #ffbf00;
+
+$card-width: 70px;
+$card-height: 100px;
+
+$card-color: #FFF;
+$card-bg: #FCFBE5;
+
+$card-boxshadow: 0 0 5px $base-color;
+$card-hovershadow: 0 0 15px $light-color;
+
+
+.card{
+    width: $card-width;
+    height: $card-height;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.front, .back{
+  background-color: $card-bg;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  font-size: 3em;
+  box-shadow: $card-boxshadow;
+  backface-visibility: hidden;
+  z-index: 2;
+  transition: all .35s linear;
+  &:hover{
+    box-shadow: $card-hovershadow;
+  }
+}
+.front{
+    color: $card-bg;
+    transform: perspective(600px) rotateY(0deg);
+    position: relative;
+    &-inner{
+        position: absolute;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        top: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.back{
+    color: $card-color;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    transform: perspective(600px) rotateY(-180deg);
+}
+.flipped{
+    .front{
+    transform: rotateY(-180deg);
+    }
+    .back{
+    transform: rotateY(0deg);
+    }
+}

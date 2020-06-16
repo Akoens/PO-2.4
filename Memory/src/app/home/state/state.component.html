@@ -1,0 +1,10 @@
+<div class="container">
+  <h2>Angular memory</h2>
+  <div class="state">
+    <span id="time">Time passed: {{memory.currentTime}} seconden.</span>
+    <span id="found"> Cards found: {{memory.flippedCards/2}}</span>
+    <span id="show">Show time: 
+      <button id="myTime"><div id="timeLeft" [style.width]='memory.showTimeWidth' [style.background]='memory.timeColor'></div></button>
+    </span>
+  </div>
+</div>

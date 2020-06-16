@@ -1,0 +1,22 @@
+<table id="meta">
+    <tr><td>
+    <br>
+      <b>Card chacters:</b> 
+        <select name="character" id="character" (change) = "changeBackHandeler($event)">
+          <option value="*" selected>*</option>
+          <option value="#">#</option>
+          <option value="@">@</option>
+          <option value="&">&</option>
+          <option value="%">%</option>
+          <option value="X">X</option>
+        </select>
+      <br>
+      <b>Board size:</b>
+      <select (change) = "changeSizeHandeler($event)" >
+        <option value=2>2</option>
+		    <option value=4>4</option>
+		    <option value=6 selected>6</option>
+      </select>
+    </td></tr>
+    <button (click) = "memory.newGame()">New Game</button>
+</table>

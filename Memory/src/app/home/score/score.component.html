@@ -1,0 +1,10 @@
+<div class="container">
+  <table id="meta">
+      <tr><td>
+        <b>Top {{memory.amountOfScores}}</b>
+        <ol id="topscores" *ngFor="let player of memory.topScores">{{player.toString()}}</ol>
+        <b>Average playtime:</b> <span id="gemiddeld">{{memory.avaragePlayTime}}s ({{-1*(memory.avaragePlayTime - memory.currentTime)}}s)</span><br/><br/>
+        <input type="text" [(ngModel)] = "name" placeholder="Enter your name"><button (click)="memory.addScore(name)">Submit</button><br><br>
+      </td></tr>
+  </table>
+</div>

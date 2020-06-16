@@ -1,0 +1,14 @@
+<div class="card" [class.flipped]="card.flipped" (click)="memory.flipCard(card)">
+  <ng-container *ngIf="card.found; else elseTemplate">
+    <div class="back" [ngStyle]="{'background-color': memory.cardFoundColor}" [innerHtml]="card.template">
+    </div>
+  </ng-container>
+  <ng-template #elseTemplate>
+    <div class="back" [ngStyle]="{'background-color': memory.cardBackColor}" [innerHtml]="card.template">
+    </div>
+  </ng-template>
+    <div class="front" >
+      <div class="front-inner" [ngStyle]="{'background-color': memory.cardColor}" [innerHtml]="memory.defaultTemplate">
+      </div>
+    </div>
+  </div>

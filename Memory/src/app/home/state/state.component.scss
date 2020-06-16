@@ -1,0 +1,23 @@
+.container{
+    text-align: center;
+    width: 200px;
+    padding-left: 300px;
+    padding-bottom: 20px;
+    position: static;
+    
+}
+.state{
+    display: grid;
+    grid-auto-flow: row;
+    grid-row-gap: 10px;
+}
+#myTime {
+    position: relative;
+    width: 200px;
+    height: 30px;
+    background-color: #ddd;
+}
+#timeLeft {
+    width: 185px;
+    height: 20px;
+}

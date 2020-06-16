@@ -1,0 +1,10 @@
+<div class="navbar">
+    <a routerLink="/welcome" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Welcome</a>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">home</a>
+
+    <a *ngIf="!authService.loggedIn()" routerLink="/login" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Login</a>
+    <a *ngIf="authService.loggedIn()" routerLink="/welcome" (click)="authService.logout()">Logout</a>
+</div>
+<div class="main">
+    <router-outlet></router-outlet>
+</div>
